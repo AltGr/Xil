@@ -1,0 +1,26 @@
+Playing with Scala parsers:
+        an implementation of an indentation-based syntax for HTML
+
+Principle:
+define <tag attributes>contents</tag> with syntaxes:
+
+- tag<attributes>:
+
+then, the contents of the tag will be the rest of the line, and the next lines
+until their indentation is equal or less than that of the tag.
+
+- or tag<attributes>{ contents }
+
+with explicit, possibly multi-line, contents
+
+
+You can also use {{verbatim contents}}
+
+
+This is nothing serious really :)
+
+
+NB: I have seen that the web framework for Haskell Yesod has a syntax for HTML
+called Hamlet that has some simiarities with this (but it's of course much, much
+more). If you're interested in something more serious check out
+http://www.yesodweb.com/book/shakespearean-templates
